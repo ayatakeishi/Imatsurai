@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Imatsurai"
+        tools:targetApi="31">
+        <activity
+            android:name=".kaiketsuhou_bathsoap"
+            android:exported="false" />
+        <activity
+            android:name=".kaiketsuhou_hotyoga"
+            android:exported="false" />
+        <activity
+            android:name=".kaiketsuhou_soudan"
+            android:exported="false" />
+        <activity
+            android:name=".kaiketsuhou_eiga"
+            android:exported="false" />
+        <activity
+            android:name=".sotonomigasuki"
+            android:exported="false" />
+        <activity
+            android:name=".oshikatsuwoshiteiru"
+            android:exported="false" />
+        <activity
+            android:name=".soudan_naiyou"
+            android:exported="false" />
+        <activity
+            android:name=".soudan_top"
+            android:exported="false" />
+        <activity
+            android:name=".kaizenhou_top"
+            android:exported="false" />
+        <activity
+            android:name=".chatt"
+            android:exported="false" />
+        <activity
+            android:name=".menusentaku"
+            android:exported="false" />
+        <activity
+            android:name=".kyounochoushi"
+            android:exported="false" />
+        <activity
+            android:name=".sutoresuhassanhou"
+            android:exported="false" />
+        <activity
+            android:name=".hibinotaicho"
+            android:exported="false" />
+        <activity
+            android:name=".seinengappi"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
