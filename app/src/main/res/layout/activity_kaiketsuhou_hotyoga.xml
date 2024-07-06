@@ -11,7 +11,7 @@
         android:layout_width="146dp"
         android:layout_height="31dp"
         android:gravity="center"
-        android:text="解決法　ホットヨガ"
+        android:text="解決法 ホットヨガ"
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -19,6 +19,5 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.287" />
 
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
+
