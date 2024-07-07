@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
 
         val nextButton = findViewById<Button>(R.id.nextButton)
         nextButton.setOnClickListener {
-            val intent = Intent(this, SeinengappiActivity::class.java)
+            val intent = Intent(this, seinengappi::class.java)
             startActivity(intent)
         }
     }

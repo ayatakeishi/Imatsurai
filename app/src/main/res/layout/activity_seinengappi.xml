@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFF0F5"
-    tools:context=".SeinengappiActivity">
+    tools:context=".seinengappi">
 
     <EditText
         android:id="@+id/editTextDate"
@@ -30,7 +30,7 @@
         android:layout_marginBottom="328dp"
         android:background="#FFA500"
         android:text="次へ"
-        android:textColor="#FFFFFF"
+        android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.538"

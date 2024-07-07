@@ -5,9 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFF0F5"
-    tools:context=".MainActivity">
+    tools:context=".hibinotaicho">
 
-    <TextView
+<TextView
         android:id="@+id/textViewTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -70,12 +70,15 @@
         android:layout_marginBottom="140dp"
         android:background="#FFA500"
         android:text="次へ"
-        android:textColor="#FFFFFF"
+        android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/radioGroup"
         app:layout_constraintVertical_bias="1.0" />
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
