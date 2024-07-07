@@ -7,7 +7,6 @@
     android:background="#FFF0F5"
     tools:context=".MainActivity">
 
-
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
@@ -22,46 +21,59 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.16" />
 
-
-
-
     <RadioGroup
         android:id="@+id/radioGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@+id/editTextDate"
+        app:layout_constraintTop_toBottomOf="@id/textView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintVertical_bias="0.4">
+        app:layout_constraintVertical_bias="0.1">
 
+        <RadioButton
+            android:id="@+id/radioButtonYes"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
+            android:padding="8dp"
+            android:text="良い" />
+
+        <RadioButton
+            android:id="@+id/radioButtonNo"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
+            android:padding="8dp"
+            android:text="悪い" />
+        <RadioButton
+            android:id="@+id/radioButtonNeutral"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
+            android:padding="8dp"
+            android:text="普通・分からない" />
     </RadioGroup>
 
-
-    <RadioButton
-        android:id="@+id/radioButtonYes"
+    <Button
+        android:id="@+id/nextButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="良い"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="255dp" />
-
-    <RadioButton
-        android:id="@+id/radioButtonNo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="悪い"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="351dp" />
-
-
-    <RadioButton
-        android:id="@+id/radioButtonNo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="普通・分からない"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="351dp" />
-
+        android:layout_marginBottom="250dp"
+        android:background="#0000FF"
+        android:text="次へ"
+        android:textColor="#FFFFFF"
+        style="@style/Widget.AppCompat.Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.547"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+

@@ -4,9 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/app_background"
+    android:background="@color/purple_200"
     tools:context=".MainActivity">
-
 
     <TextView
         android:id="@+id/textView"
@@ -22,64 +21,49 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.16" />
 
-
-
-
     <RadioGroup
         android:id="@+id/radioGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@+id/editTextDate"
+        app:layout_constraintTop_toBottomOf="@id/textView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintVertical_bias="0.4">
 
+        <RadioButton
+            android:id="@+id/radioButtonYes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="運動（ヨガ、ジョギングなど）" />
+
+        <RadioButton
+            android:id="@+id/radioButtonNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="マッサージやエステに行く" />
+
+        <RadioButton
+            android:id="@+id/radioButtonUnknown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="家でゆっくり過ごす" />
     </RadioGroup>
-
-
-    <RadioButton
-        android:id="@+id/radioButtonYes"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="運動（ヨガ、ジョギングなど）"
-        tools:layout_editor_absoluteX="101dp"
-        tools:layout_editor_absoluteY="260dp" />
-
-
-    <RadioButton
-        android:id="@+id/radioButtonNo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="マッサージやエステに行く"
-        tools:layout_editor_absoluteX="105dp"
-        tools:layout_editor_absoluteY="356dp" />
-
-
-    <RadioButton
-        android:id="@+id/radioButtonUnknown"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="家でゆっくり過ごす"
-        tools:layout_editor_absoluteX="112dp"
-        tools:layout_editor_absoluteY="453dp" />
 
     <Button
         android:id="@+id/nextButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="140dp"
-        android:background="#FFA500"
+        android:background="#673AB7"
         android:text="次へ"
-        android:textColor="#FFFFFF"
+        android:textColor="#FFFA60"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/editTextDate"
+        app:layout_constraintTop_toBottomOf="@id/radioGroup"
         app:layout_constraintVertical_bias="1.0" />
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
