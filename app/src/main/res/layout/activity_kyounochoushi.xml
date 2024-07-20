@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFF0F5"
-    tools:context=".MainActivity">
+    tools:context=".kyounochoushi">
 
     <TextView
         android:id="@+id/textView"
@@ -62,9 +62,22 @@
         android:id="@+id/nextButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="250dp"
+        android:layout_marginBottom="80dp"
         android:background="#0000FF"
         android:text="次へ"
+        android:textColor="#FFFFFF"
+        style="@style/Widget.AppCompat.Button"
+        app:layout_constraintBottom_toTopOf="@+id/backButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.547"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#0000FF"
+        android:text="戻る"
         android:textColor="#FFFFFF"
         style="@style/Widget.AppCompat.Button"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -73,7 +86,6 @@
         app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-
 
 
 

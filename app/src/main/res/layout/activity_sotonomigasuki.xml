@@ -21,35 +21,32 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.16" />
 
-
     <RadioGroup
         android:id="@+id/radioGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@+id/textView1"
+        app:layout_constraintTop_toBottomOf="@id/textView1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintVertical_bias="0.4">
 
+        <RadioButton
+            android:id="@+id/radioButtonYes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="はい"
+            tools:layout_editor_absoluteX="175dp"
+            tools:layout_editor_absoluteY="278dp" />
 
-         <RadioButton
-             android:id="@+id/radioButtonYes"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:text="はい"
-             tools:layout_editor_absoluteX="175dp"
-             tools:layout_editor_absoluteY="278dp" />
-
-         <RadioButton
-             android:id="@+id/radioButtonNo"
-             android:layout_width="88dp"
-             android:layout_height="72dp"
-             android:text="いいえ"
-             tools:layout_editor_absoluteX="175dp"
-             tools:layout_editor_absoluteY="370dp" />
+        <RadioButton
+            android:id="@+id/radioButtonNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="いいえ"
+            tools:layout_editor_absoluteX="175dp"
+            tools:layout_editor_absoluteY="370dp" />
     </RadioGroup>
-
 
     <Button
         android:id="@+id/nextButton"
@@ -63,9 +60,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/editTextDate"
+        app:layout_constraintTop_toBottomOf="@id/radioGroup"
         app:layout_constraintVertical_bias="1.0" />
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
