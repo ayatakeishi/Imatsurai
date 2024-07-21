@@ -15,7 +15,6 @@ class kyounochoushi : AppCompatActivity() {
     private lateinit var radioGroup: RadioGroup
     private lateinit var nextButton: Button
     private lateinit var backButton: Button
-    private var lastCheckedRadioButtonId = -1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,6 +25,14 @@ class kyounochoushi : AppCompatActivity() {
         nextButton = findViewById(R.id.nextButton)
         backButton = findViewById(R.id.backButton)
 
+        // 質問に回答済みかどうかを確認
+        if (!sharedPreferences.getBoolean("answeredSutoresuhassanhou", false)) {
+            // 回答済みでない場合、前の画面に戻る
+            Toast.makeText(this, "前の画面の質問に回答してください", Toast.LENGTH_SHORT).show()
+            finish()
+            return
+        }
+
         // 初期状態では次へボタンを無効にする
         nextButton.isEnabled = false
 
@@ -33,28 +40,13 @@ class kyounochoushi : AppCompatActivity() {
         val savedRadioButtonId = sharedPreferences.getInt("selectedRadioButtonId", -1)
         if (savedRadioButtonId != -1) {
             radioGroup.check(savedRadioButtonId)
-            lastCheckedRadioButtonId = savedRadioButtonId
             nextButton.isEnabled = true // 選択が復元された場合、次へボタンを有効にする
         }
 
         // ラジオボタンにチェック変更リスナーを設定する
-        radioGroup.setOnCheckedChangeListener { group, checkedId ->
-            if (checkedId != -1) {
-                nextButton.isEnabled = true // ラジオボタンが選択された場合、次へボタンを有効にする
-                lastCheckedRadioButtonId = checkedId
-            } else {
-                nextButton.isEnabled = false // ラジオボタンの選択をクリアした場合、次へボタンを無効にする
-            }
-        }
-
-        // ラジオボタンにクリックリスナーを設定する
-        for (i in 0 until radioGroup.childCount) {
-            val radioButton = radioGroup.getChildAt(i) as RadioButton
-            radioButton.setOnClickListener {
-                if (radioButton.id == lastCheckedRadioButtonId) {
-                    radioGroup.clearCheck()
-                }
-            }
+        radioGroup.setOnCheckedChangeListener { _, checkedId ->
+            nextButton.isEnabled = checkedId != -1 // ラジオボタンが選択された場合、次へボタンを有効にする
+            Log.d("kyounochoushi", if (checkedId != -1) "Radio button selected: $checkedId" else "Radio button selection cleared")
         }
 
         nextButton.setOnClickListener {
@@ -74,7 +66,7 @@ class kyounochoushi : AppCompatActivity() {
         }
 
         backButton.setOnClickListener {
-            finish() // 戻るボタンを押した時に現在のアクティビティを終了して前のアクティビティに戻る
+            finish()
         }
     }
 }

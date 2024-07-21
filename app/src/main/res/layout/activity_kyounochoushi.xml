@@ -14,12 +14,10 @@
         android:text="今日の調子はいかがですか？"
         android:gravity="center"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.16" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.1" />
 
     <RadioGroup
         android:id="@+id/radioGroup"
@@ -48,6 +46,7 @@
             android:minHeight="48dp"
             android:padding="8dp"
             android:text="悪い" />
+
         <RadioButton
             android:id="@+id/radioButtonNeutral"
             android:layout_width="wrap_content"
@@ -62,15 +61,16 @@
         android:id="@+id/nextButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="80dp"
+        android:layout_marginBottom="16dp"
         android:background="#0000FF"
         android:text="次へ"
         android:textColor="#FFFFFF"
+        android:enabled="false"
         style="@style/Widget.AppCompat.Button"
-        app:layout_constraintBottom_toTopOf="@+id/backButton"
+        app:layout_constraintBottom_toTopOf="@id/backButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.547"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/radioGroup" />
 
     <Button
         android:id="@+id/backButton"
@@ -82,10 +82,6 @@
         style="@style/Widget.AppCompat.Button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.547"
         app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
