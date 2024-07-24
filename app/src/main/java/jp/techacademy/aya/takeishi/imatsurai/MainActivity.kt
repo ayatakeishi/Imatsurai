@@ -71,3 +71,12 @@ class MainActivity : AppCompatActivity() {
         finish()
     }
 }
+
+/**黄色の波線は「日本語辞めた方がいい」という警告。でも一応大丈夫。
+ * keyは、発散法、valueはその答え
+ * l63はブーリン式。intとかではない。ブーリンは答えが2択しかないもの。true or false
+ * 質問に答えたかどうか？sutoresuhassanhouのl43と連動
+ *
+ *
+ *
+ */

@@ -12,6 +12,12 @@
         android:theme="@style/Theme.Imatsurai"
         tools:targetApi="31">
         <activity
+            android:name=".activity_yoyakukakutei"
+            android:exported="false" />
+        <activity
+            android:name=".soudannyuryoku"
+            android:exported="false" />
+        <activity
             android:name=".kaiketsuhou_bathsoap"
             android:exported="false" />
         <activity
