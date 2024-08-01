@@ -13,7 +13,7 @@ class soudan_naiyou : AppCompatActivity() {
         val nextButton = findViewById<Button>(R.id.nextButton)
         nextButton.setOnClickListener {
             // yoyakukakuteiアクティビティに遷移するためのインテントを発行
-            val intent = Intent(this, yoyakukakutei::class.java)
+            val intent = Intent(this, activity_yoyakukakutei::class.java)
             startActivity(intent)
         }
     }
