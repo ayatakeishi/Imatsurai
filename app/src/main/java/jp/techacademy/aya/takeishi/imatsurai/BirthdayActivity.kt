@@ -7,11 +7,11 @@ import android.widget.Button
 import android.widget.Spinner
 import androidx.appcompat.app.AppCompatActivity
 
-class seinengappi : AppCompatActivity() {
+class BirthdayActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_seinengappi)
+        setContentView(R.layout.activity_birthday)
 
         val yearSpinner = findViewById<Spinner>(R.id.yearSpinner)
         val monthSpinner = findViewById<Spinner>(R.id.monthSpinner)
@@ -38,7 +38,7 @@ class seinengappi : AppCompatActivity() {
         daySpinner.adapter = dayAdapter
 
         nextButton.setOnClickListener {
-            val intent = Intent(this, hibinotaicho::class.java)
+            val intent = Intent(this, DefaultConditionActivity::class.java)
             startActivity(intent)
         }
     }

@@ -7,10 +7,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
-class activity_yoyakukakutei : AppCompatActivity() {
+class CounselingConfActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_yoyakukakutei)
+        setContentView(R.layout.activity_counseling_conf)
 
         // Window insets listener
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.textView)) { v, insets ->

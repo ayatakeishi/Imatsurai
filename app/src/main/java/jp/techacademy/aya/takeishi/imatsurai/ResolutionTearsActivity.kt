@@ -6,10 +6,10 @@ import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
-class Kaiketsuhou_EigaActivity : AppCompatActivity() {
+class ResolutionTearsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_kaiketsuhou_eiga)
+        setContentView(R.layout.activity_resolution_tears)
 
         // TextViewのクリックリスナーを設定
         val textView = findViewById<TextView>(R.id.textView)

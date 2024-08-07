@@ -7,10 +7,10 @@ import android.widget.RadioButton
 import android.widget.RadioGroup
 import androidx.appcompat.app.AppCompatActivity
 
-class sotonomigasuki : AppCompatActivity() {
+class MyfavoActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_sotonomigasuki)
+        setContentView(R.layout.activity_myfavo)
 
         val nextButton = findViewById<Button>(R.id.nextButton)
         val radioGroup = findViewById<RadioGroup>(R.id.radioGroup)
@@ -20,10 +20,10 @@ class sotonomigasuki : AppCompatActivity() {
         nextButton.setOnClickListener {
             val intent = if (radioGroup.checkedRadioButtonId == radioButtonYes.id) {
                 // "はい"が選択されている場合
-                Intent(this, kaiketsuhou_hotyoga::class.java)
+                Intent(this, ResolutionTearsActivity::class.java)
             } else {
                 // "いいえ"が選択されている場合
-                Intent(this, kaiketsuhou_bathsoap::class.java)
+                Intent(this, CounselingContentActivity::class.java)
             }
             startActivity(intent)
         }

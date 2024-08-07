@@ -8,10 +8,10 @@ import android.widget.RadioGroup
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
-class kaizenhou_top : AppCompatActivity() {
+class SelfFitTopActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_kaizenhou_top)
+        setContentView(R.layout.activity_self_fit_top)
 
         val nextButton = findViewById<Button>(R.id.nextButton)
         val radioGroup = findViewById<RadioGroup>(R.id.radioGroup)
@@ -21,10 +21,10 @@ class kaizenhou_top : AppCompatActivity() {
         nextButton.setOnClickListener {
             val intent = if (radioGroup.checkedRadioButtonId == radioButtonYes.id) {
                 // "そう思う"が選択されている場合
-                Intent(this, oshikatsuwoshiteiru::class.java)
+                Intent(this, MyfavoActivity::class.java)
             } else {
                 // "そう思わない"が選択されている場合
-                Intent(this, sotonomigasuki::class.java)
+                Intent(this, DrinkoutsideActivity::class.java)
             }
             startActivity(intent)
         }

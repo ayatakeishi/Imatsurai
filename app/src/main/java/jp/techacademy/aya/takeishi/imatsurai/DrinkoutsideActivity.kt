@@ -7,10 +7,10 @@ import android.widget.RadioButton
 import android.widget.RadioGroup
 import androidx.appcompat.app.AppCompatActivity
 
-class oshikatsuwoshiteiru : AppCompatActivity() {
+class DrinkoutsideActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_oshikatsuwoshiteiru)
+        setContentView(R.layout.activity_drinkoutside)
 
         val nextButton = findViewById<Button>(R.id.nextButton)
         val radioGroup = findViewById<RadioGroup>(R.id.radioGroup)
@@ -20,10 +20,10 @@ class oshikatsuwoshiteiru : AppCompatActivity() {
         nextButton.setOnClickListener {
             val intent = if (radioGroup.checkedRadioButtonId == radioButtonYes.id) {
                 // "はい"が選択されている場合
-                Intent(this, kaiketsuhou_eiga::class.java)
+                Intent(this, ResolutionHotyogaActivity::class.java)
             } else {
                 // "いいえ"が選択されている場合
-                Intent(this, soudan_top::class.java)
+                Intent(this, ResolutionBathsoapActivity::class.java)
             }
             startActivity(intent)
         }

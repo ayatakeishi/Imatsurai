@@ -7,10 +7,10 @@ import android.widget.Button
 import android.widget.DatePicker
 import java.util.*
 
-class soudan_top : AppCompatActivity() {
+class CounselingContentActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_soudan_top)
+        setContentView(R.layout.activity_counseling_top)
 
         // DatePicker の初期化
         val datePicker = findViewById<DatePicker>(R.id.datePicker)

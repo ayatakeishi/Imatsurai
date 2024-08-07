@@ -8,12 +8,12 @@ import android.widget.Button
 class soudan_naiyou : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_soudan_naiyou)
+        setContentView(R.layout.activity_counseling_content)
 
         val nextButton = findViewById<Button>(R.id.nextButton)
         nextButton.setOnClickListener {
             // yoyakukakuteiアクティビティに遷移するためのインテントを発行
-            val intent = Intent(this, activity_yoyakukakutei::class.java)
+            val intent = Intent(this, CounselingConfActivity::class.java)
             startActivity(intent)
         }
     }

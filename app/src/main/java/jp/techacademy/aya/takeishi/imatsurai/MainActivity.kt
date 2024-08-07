@@ -55,7 +55,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun navigateToSeinengappiScreen() {
-        val intent = Intent(this, seinengappi::class.java)
+        val intent = Intent(this, BirthdayActivity::class.java)
         startActivity(intent)
         finish()
     }
@@ -63,9 +63,9 @@ class MainActivity : AppCompatActivity() {
     private fun navigateToNextScreenBasedOnFlag() {
         val hasAnsweredSutoresuhassanhou = sharedPreferences.getBoolean("answeredSutoresuhassanhou", false)
         val intent = if (hasAnsweredSutoresuhassanhou) {
-            Intent(this, kyounochoushi::class.java)
+            Intent(this, TodayConditionActivity::class.java)
         } else {
-            Intent(this, sutoresuhassanhou::class.java)
+            Intent(this, WayOfReleaseStressActivity::class.java)
         }
         startActivity(intent)
         finish()

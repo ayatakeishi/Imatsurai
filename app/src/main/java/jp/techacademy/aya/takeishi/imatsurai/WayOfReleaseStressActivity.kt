@@ -9,13 +9,13 @@ import android.widget.RadioGroup
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
-class sutoresuhassanhou : AppCompatActivity() {
+class WayOfReleaseStressActivity : AppCompatActivity() {
     private lateinit var sharedPreferences: SharedPreferences
     private var lastCheckedRadioButtonId = -1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_sutoresuhassanhou)
+        setContentView(R.layout.activity_way_of_release_stress)
 
         sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE)
         val radioGroup = findViewById<RadioGroup>(R.id.radioGroup)
@@ -43,7 +43,7 @@ class sutoresuhassanhou : AppCompatActivity() {
                 editor.putBoolean("answeredSutoresuhassanhou", true)
                 editor.apply()
 
-                val intent = Intent(this, kyounochoushi::class.java)
+                val intent = Intent(this, TodayConditionActivity::class.java)
                 startActivity(intent)
             } else {
                 Toast.makeText(this, "ラジオボタンを選択してください", Toast.LENGTH_SHORT).show()

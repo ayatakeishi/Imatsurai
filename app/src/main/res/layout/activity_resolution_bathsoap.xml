@@ -4,14 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".kaiketsuhou_soudan">
+    tools:context=".ResolutionTearsActivity">
+
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="146dp"
-        android:layout_height="31dp"
+        android:layout_width="137dp"
+        android:layout_height="30dp"
         android:gravity="center"
-        android:text="解決法 ホットヨガ"
+        android:text="解決法　バスソープ"
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -20,4 +21,3 @@
         app:layout_constraintVertical_bias="0.287" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-

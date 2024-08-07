@@ -6,11 +6,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
-import android.widget.RadioButton
 import android.widget.RadioGroup
 import android.widget.Toast
 
-class kyounochoushi : AppCompatActivity() {
+class TodayConditionActivity : AppCompatActivity() {
     private lateinit var sharedPreferences: SharedPreferences
     private lateinit var radioGroup: RadioGroup
     private lateinit var nextButton: Button
@@ -18,7 +17,7 @@ class kyounochoushi : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_kyounochoushi)
+        setContentView(R.layout.activity_today_condition)
 
         sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE)
         radioGroup = findViewById(R.id.radioGroup)
@@ -58,7 +57,7 @@ class kyounochoushi : AppCompatActivity() {
                 editor.apply()
 
                 Log.d("kyounochoushi", "Next button clicked")
-                val intent = Intent(this, menusentaku::class.java)
+                val intent = Intent(this, MenuSelectActivity::class.java)
                 startActivity(intent)
             } else {
                 Toast.makeText(this, "ラジオボタンを選択してください", Toast.LENGTH_SHORT).show()

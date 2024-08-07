@@ -8,12 +8,12 @@ import android.widget.RadioGroup
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
-class hibinotaicho : AppCompatActivity() {
+class DefaultConditionActivity : AppCompatActivity() {
     private var lastCheckedRadioButtonId = -1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_hibinotaicho)
+        setContentView(R.layout.activity_default_condition)
 
         val radioGroup = findViewById<RadioGroup>(R.id.radioGroup)
         val nextButton = findViewById<Button>(R.id.nextButton)
@@ -35,7 +35,7 @@ class hibinotaicho : AppCompatActivity() {
         nextButton.setOnClickListener {
             val selectedRadioButtonId = radioGroup.checkedRadioButtonId
             if (selectedRadioButtonId != -1) {
-                val intent = Intent(this, sutoresuhassanhou::class.java)
+                val intent = Intent(this, WayOfReleaseStressActivity::class.java)
                 startActivity(intent)
             } else {
                 Toast.makeText(this, "ラジオボタンを選択してください", Toast.LENGTH_SHORT).show()

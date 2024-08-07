@@ -12,55 +12,55 @@
         android:theme="@style/Theme.Imatsurai"
         tools:targetApi="31">
         <activity
-            android:name=".activity_yoyakukakutei"
+            android:name=".CounselingConfActivity"
             android:exported="false" />
         <activity
             android:name=".soudannyuryoku"
             android:exported="false" />
         <activity
-            android:name=".kaiketsuhou_bathsoap"
+            android:name=".ResolutionBathsoapActivity"
             android:exported="false" />
         <activity
-            android:name=".kaiketsuhou_hotyoga"
+            android:name=".ResolutionHotyogaActivity"
             android:exported="false" />
         <activity
-            android:name=".kaiketsuhou_soudan"
+            android:name=".ResolutionCounselingActivity"
             android:exported="false" />
         <activity
-            android:name=".kaiketsuhou_eiga"
+            android:name=".ResolutionTearsActivity"
             android:exported="false" />
         <activity
-            android:name=".sotonomigasuki"
+            android:name=".DrinkoutsideActivity"
             android:exported="false" />
         <activity
-            android:name=".oshikatsuwoshiteiru"
+            android:name=".MyfavoActivity"
             android:exported="false" />
         <activity
             android:name=".soudan_naiyou"
             android:exported="false" />
         <activity
-            android:name=".soudan_top"
+            android:name=".CounselingContentActivity"
             android:exported="false" />
         <activity
             android:name=".kaizenhou_top"
             android:exported="false" />
         <activity
-            android:name=".chatt"
+            android:name=".ChatActivity"
             android:exported="false" />
         <activity
-            android:name=".menusentaku"
+            android:name=".MenuSelectActivity"
             android:exported="false" />
         <activity
-            android:name=".kyounochoushi"
+            android:name=".TodayConditionActivity"
             android:exported="false" />
         <activity
-            android:name=".sutoresuhassanhou"
+            android:name=".WayOfReleaseStressActivity"
             android:exported="false" />
         <activity
-            android:name=".hibinotaicho"
+            android:name=".DefaultConditionActivity"
             android:exported="false" />
         <activity
-            android:name=".seinengappi"
+            android:name=".BirthdayActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
