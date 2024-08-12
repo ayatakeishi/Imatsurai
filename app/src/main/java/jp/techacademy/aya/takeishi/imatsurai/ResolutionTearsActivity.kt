@@ -18,6 +18,18 @@ class ResolutionTearsActivity : AppCompatActivity() {
             val intent = Intent(Intent.ACTION_VIEW)
             intent.data = Uri.parse(url)
             startActivity(intent)
+
+        }
+
+        // 新しく追加するリンクTextViewのクリックリスナー
+        val linkTextView = findViewById<TextView>(R.id.linkTextView)
+        linkTextView.setOnClickListener {
+            val url = "https://www.tearsteacher.com/"
+            val intent = Intent(Intent.ACTION_VIEW)
+            intent.data = Uri.parse(url)
+            startActivity(intent)
+
+
         }
     }
 }

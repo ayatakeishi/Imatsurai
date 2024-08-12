@@ -15,9 +15,6 @@
             android:name=".CounselingConfActivity"
             android:exported="false" />
         <activity
-            android:name=".soudannyuryoku"
-            android:exported="false" />
-        <activity
             android:name=".ResolutionBathsoapActivity"
             android:exported="false" />
         <activity
@@ -42,7 +39,7 @@
             android:name=".CounselingContentActivity"
             android:exported="false" />
         <activity
-            android:name=".kaizenhou_top"
+            android:name=".SelfFitTopActivity"
             android:exported="false" />
         <activity
             android:name=".ChatActivity"
