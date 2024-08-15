@@ -9,10 +9,10 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="146dp"
-        android:layout_height="31dp"
+        android:layout_width="250dp"
+        android:layout_height="100dp"
         android:gravity="center"
-        android:text="解決法　個別相談へ"
+        android:text="解決法　個別相談へ\nカウンセラーに直接相談しましょう"
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -20,5 +20,18 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.287" />
 
+    <TextView
+        android:id="@+id/linkTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="個別相談のページへ"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="18sp"
+        android:padding="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintTop_toBottomOf="@id/textView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

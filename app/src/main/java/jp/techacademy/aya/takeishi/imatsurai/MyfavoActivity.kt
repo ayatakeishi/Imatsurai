@@ -23,7 +23,7 @@ class MyfavoActivity : AppCompatActivity() {
                 Intent(this, ResolutionTearsActivity::class.java)
             } else {
                 // "いいえ"が選択されている場合
-                Intent(this, CounselingContentActivity::class.java)
+                Intent(this, ResolutionCounselingActivity::class.java)
             }
             startActivity(intent)
         }
