@@ -7,17 +7,31 @@
     android:background="#FFF0F5"
     tools:context=".MainActivity">
 
+    <!-- メニュー選択の文言を表示するTextView -->
+    <TextView
+        android:id="@+id/menuTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="メニュー選択\nお好きなメニューを選んでください"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="40dp"/>
+
     <Button
         android:id="@+id/button_chat"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:text="チャット"
         android:backgroundTint="#FFA500"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/menuTextView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        android:layout_marginTop="230dp" />
+        android:layout_marginTop="40dp" />
 
     <Button
         android:id="@+id/button_improvement"
