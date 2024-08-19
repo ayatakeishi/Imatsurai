@@ -1,8 +1,10 @@
 package jp.techacademy.aya.takeishi.imatsurai
 
+import android.content.Intent
 import android.os.Bundle
 import android.webkit.WebView
 import android.webkit.WebViewClient
+import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
@@ -22,6 +24,7 @@ class ResolutionTearsActivity : AppCompatActivity() {
             val url = "https://www.tearsteacher.com/"
             webView.loadUrl(url)
             webView.visibility = WebView.VISIBLE // WebViewを表示
+            textView.visibility = TextView.GONE // textViewを非表示
         }
 
         // 新しく追加するリンクTextViewのクリックリスナー
@@ -30,6 +33,16 @@ class ResolutionTearsActivity : AppCompatActivity() {
             val url = "https://www.tearsteacher.com/"
             webView.loadUrl(url)
             webView.visibility = WebView.VISIBLE // WebViewを表示
+            linkTextView.visibility = TextView.GONE // linkTextViewを非表示
+            textView.visibility = TextView.GONE // textViewも非表示
+        }
+
+        // 「メニュー選択画面に戻る」ボタンのクリックリスナーを設定
+        val returnButton = findViewById<Button>(R.id.returnButton)
+        returnButton.setOnClickListener {
+            // MenuSelectActivityへ遷移
+            val intent = Intent(this, MenuSelectActivity::class.java)
+            startActivity(intent)
         }
     }
 }

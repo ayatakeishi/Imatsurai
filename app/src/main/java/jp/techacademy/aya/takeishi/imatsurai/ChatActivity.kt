@@ -8,7 +8,7 @@ import android.widget.Button
 class ChatActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_chatt)
+        setContentView(R.layout.activity_chat)
 
 
         // ボタンのクリックリスナーを設定
