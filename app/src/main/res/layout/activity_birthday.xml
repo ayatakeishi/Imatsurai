@@ -7,6 +7,7 @@
     android:background="#FFF0F5"
     tools:context=".BirthdayActivity">
 
+    <!-- 「生年月日を選択してください」のテキスト -->
     <TextView
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
@@ -15,12 +16,12 @@
         android:gravity="center"
         android:textSize="24sp"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/yearSpinner"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintVertical_chainStyle="spread_inside"
-        app:layout_constraintVertical_bias="0.5" />
+        app:layout_constraintBottom_toTopOf="@id/yearSpinner"
+        />
 
+    <!-- 年選択用のスピナー -->
     <Spinner
         android:id="@+id/yearSpinner"
         android:layout_width="0dp"
@@ -29,8 +30,10 @@
         app:layout_constraintTop_toBottomOf="@id/textView1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/monthSpinner"
         app:layout_constraintWidth_percent="0.8" />
 
+    <!-- 月選択用のスピナー -->
     <Spinner
         android:id="@+id/monthSpinner"
         android:layout_width="0dp"
@@ -39,8 +42,10 @@
         app:layout_constraintTop_toBottomOf="@id/yearSpinner"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/daySpinner"
         app:layout_constraintWidth_percent="0.8" />
 
+    <!-- 日選択用のスピナー -->
     <Spinner
         android:id="@+id/daySpinner"
         android:layout_width="0dp"
@@ -49,8 +54,10 @@
         app:layout_constraintTop_toBottomOf="@id/monthSpinner"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/nextButton"
         app:layout_constraintWidth_percent="0.8" />
 
+    <!-- 次へボタン -->
     <Button
         android:id="@+id/nextButton"
         android:layout_width="wrap_content"
@@ -61,6 +68,8 @@
         android:textColor="#FFFFFF"
         app:layout_constraintTop_toBottomOf="@id/daySpinner"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
