@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/app_background"
+    android:background="#FFF0F5"
     tools:context=".MainActivity">
 
     <!-- メニュー選択の文言を表示するTextView -->
@@ -12,49 +12,49 @@
         android:id="@+id/menuTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="180dp"
+        android:gravity="center"
         android:text="メニュー選択\nお好きなメニューを選んでください"
         android:textSize="18sp"
         android:textStyle="bold"
-        android:gravity="center"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="40dp"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button_chat"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:text="チャット"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="16dp"
         android:backgroundTint="#FFA500"
-        app:layout_constraintTop_toBottomOf="@id/menuTextView"
-        app:layout_constraintStart_toStartOf="parent"
+        android:text="チャット"
+        app:layout_constraintBottom_toTopOf="@+id/button_improvement"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        android:layout_marginTop="40dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/menuTextView" />
 
     <Button
         android:id="@+id/button_improvement"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:text="自分に合った改善法"
         android:backgroundTint="#FFA500"
+        android:text="自分に合った改善法"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/button_chat"
-        android:layout_marginTop="32dp" />
+        app:layout_constraintTop_toBottomOf="@id/button_chat" />
 
     <Button
         android:id="@+id/button_consultation"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:text="個別に相談"
         android:backgroundTint="#FFA500"
+        android:text="個別に相談"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/button_improvement"
-        android:layout_marginTop="32dp" />
+        app:layout_constraintTop_toBottomOf="@id/button_improvement" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
