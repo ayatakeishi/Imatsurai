@@ -9,6 +9,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
         android:gravity="center"
         android:text="解決法　涙活\n涙活とは涙をながすことで\n心をデトックスすることです"
         android:textSize="15sp"
@@ -22,13 +23,15 @@
         android:id="@+id/linkTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="24dp"
         android:text="詳しくはリンクをご覧ください"
         android:textColor="@android:color/holo_blue_dark"
         android:textSize="15sp"
-        app:layout_constraintTop_toBottomOf="@id/textView"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/returnButton"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView" />
 
     <WebView
         android:id="@+id/webView"
@@ -45,10 +48,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="メニュー選択画面に戻る"
-        app:layout_constraintTop_toBottomOf="@id/webView"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginBottom="16dp"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/webView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
