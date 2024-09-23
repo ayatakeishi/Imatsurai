@@ -9,6 +9,10 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
 class ResolutionTearsActivity : AppCompatActivity() {
+
+    // WebViewに表示するURL
+    private val tearsUrl = "https://www.tearsteacher.com/"
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_resolution_tears)
@@ -21,20 +25,13 @@ class ResolutionTearsActivity : AppCompatActivity() {
         // TextViewのクリックリスナーを設定
         val textView = findViewById<TextView>(R.id.textView)
         textView.setOnClickListener {
-            val url = "https://www.tearsteacher.com/"
-            webView.loadUrl(url)
-            webView.visibility = WebView.VISIBLE // WebViewを表示
-            textView.visibility = TextView.GONE // textViewを非表示
+            loadWebView(webView)
         }
 
-        // 新しく追加するリンクTextViewのクリックリスナー
+        // リンクTextViewのクリックリスナーを設定
         val linkTextView = findViewById<TextView>(R.id.linkTextView)
         linkTextView.setOnClickListener {
-            val url = "https://www.tearsteacher.com/"
-            webView.loadUrl(url)
-            webView.visibility = WebView.VISIBLE // WebViewを表示
-            linkTextView.visibility = TextView.GONE // linkTextViewを非表示
-            textView.visibility = TextView.GONE // textViewも非表示
+            loadWebView(webView)
         }
 
         // 「メニュー選択画面に戻る」ボタンのクリックリスナーを設定
@@ -44,5 +41,16 @@ class ResolutionTearsActivity : AppCompatActivity() {
             val intent = Intent(this, MenuSelectActivity::class.java)
             startActivity(intent)
         }
+    }
+
+    // WebViewをロードして表示する関数
+    private fun loadWebView(webView: WebView) {
+        // URLをロードし、WebViewを表示する
+        webView.loadUrl(tearsUrl)
+        webView.visibility = WebView.VISIBLE
+
+        // textViewとlinkTextViewを非表示にする
+        findViewById<TextView>(R.id.textView).visibility = TextView.GONE
+        findViewById<TextView>(R.id.linkTextView).visibility = TextView.GONE
     }
 }

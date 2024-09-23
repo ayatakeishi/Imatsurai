@@ -5,13 +5,14 @@
     android:layout_height="match_parent"
     tools:context=".ResolutionTearsActivity">
 
+    <!-- 上部の説明テキスト -->
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="200dp"
         android:gravity="center"
-        android:text="解決法　涙活\n涙活とは涙をながすことで\n心をデトックスすることです"
+        android:text="解決法 涙活\n涙活とは涙をながすことで\n心をデトックスすることです"
         android:textSize="15sp"
         app:layout_constraintBottom_toTopOf="@id/linkTextView"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -19,6 +20,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.4" />
 
+    <!-- リンクテキスト -->
     <TextView
         android:id="@+id/linkTextView"
         android:layout_width="wrap_content"
@@ -33,6 +35,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textView" />
 
+    <!-- WebView -->
     <WebView
         android:id="@+id/webView"
         android:layout_width="0dp"
@@ -41,8 +44,9 @@
         app:layout_constraintBottom_toTopOf="@id/returnButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:visibility="gone"/> <!-- 初期状態では非表示 -->
+        android:visibility="gone" /> <!-- 初期状態では非表示 -->
 
+    <!-- メニュー選択画面に戻るボタン -->
     <Button
         android:id="@+id/returnButton"
         android:layout_width="wrap_content"
