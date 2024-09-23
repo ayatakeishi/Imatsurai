@@ -10,7 +10,7 @@
         android:id="@+id/chatRoomTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="160dp"
+        android:layout_marginTop="120dp"
         android:gravity="center"
         android:text="チャットルーム　なんでもお話ししましょう"
         android:textSize="18sp"
@@ -22,23 +22,28 @@
     <!-- 画像を表示するImageView -->
     <ImageView
         android:id="@+id/myImageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="420dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:contentDescription="自作のチャット画像"
+        android:scaleType="fitCenter"
         android:src="@drawable/chatt_hinagata"
-        app:layout_constraintTop_toBottomOf="@id/chatRoomTextView"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:contentDescription="自作のチャット画像" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/chatRoomTextView" />
 
     <!-- メイン画面に戻るボタンを画面の一番下に配置 -->
     <Button
         android:id="@+id/backToMainButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
         android:text="メイン画面に戻る"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginBottom="16dp"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myImageView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
