@@ -14,7 +14,7 @@
         android:layout_marginTop="160dp"
         android:gravity="center"
         android:text="日々の体調について教えてください"
-        android:textSize="24sp"
+        android:textSize="22sp"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"

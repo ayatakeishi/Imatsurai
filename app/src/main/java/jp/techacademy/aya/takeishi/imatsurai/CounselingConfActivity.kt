@@ -22,7 +22,7 @@ class CounselingConfActivity : AppCompatActivity() {
         // ボタンのクリックリスナーを設定
         val backToMainButton = findViewById<Button>(R.id.backToMainButton)
         backToMainButton.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, MenuSelectActivity::class.java)
             startActivity(intent)
             finish() // 現在のアクティビティを終了
         }
